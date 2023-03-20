@@ -7,7 +7,7 @@
         "lite-server": "^2.6.1"
     },
     "scripts": {
-        "build": "babel src --out-dir public",
+        "build": "babel src --out-dir public -w",
         "start": "lite-server --baseDir public"
     }
 }

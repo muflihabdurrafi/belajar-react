@@ -1,8 +1,23 @@
 const root = document.querySelector("#root");
-function tick() {
-  const element = /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, new Date().toLocaleTimeString()), /*#__PURE__*/React.createElement("li", null, "Apple"), /*#__PURE__*/React.createElement("li", null, "Orange"), /*#__PURE__*/React.createElement("li", null, "Grape"));
-  ReactDOM.render(element, root);
+function App() {
+  const [count, setCount] = React.useState(0);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+    onClick: function () {
+      setCount(count - 1);
+    }
+  }, "-1"), /*#__PURE__*/React.createElement("span", null, count), /*#__PURE__*/React.createElement("button", {
+    onClick: function () {
+      setCount(count + 1);
+    }
+  }, "+1"));
 }
-setInterval(function () {
-  tick();
-}, 1000);
+
+// const element = (
+//     <ul>
+//         <li>{new Date().toLocaleTimeString()}</li>
+//         <li>Muflih</li>
+//         <li>Orange</li>
+//         <li>Grape</li>
+//     </ul>
+// );
+ReactDOM.render( /*#__PURE__*/React.createElement(App, null), root);
